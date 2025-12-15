@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+   
+<body>
+   
+    <script>
+        let arr = [];
+        for (let i = 0; i < 5; i++) {
+            let mark = Number(prompt("Enter the marks of subject " + (i + 1) + ":"));
+            arr.push(mark);
+        }
+        let sum = arr.reduce((acc, value) => acc + value, 0);
+        console.log("total marks is :", sum);
+        let max = arr.sort();
+        console.log("maximum mark is :", max[arr.length - 1]);
+        console.log("minimum marks is :", max[0]);
+        let avg = sum / arr.length;
+        console.log("average marks is :", avg);
+        if (avg >= 90) {
+            console.log("Grade A");
+        }
+        else if (avg >= 80) {
+            console.log("Grade B");
+        }
+        else if (avg >= 70) {
+            console.log("Grade C");
+        }
+        else if (avg >= 60) {
+            console.log("Grade D");
+        }
+        else {
+            console.log("Grade F");
+        }
+
+
+    </script>
+</body>
+
+</html>
